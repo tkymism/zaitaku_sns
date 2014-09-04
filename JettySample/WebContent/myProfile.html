@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自分のプロフィール</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<!-- jQuery & jQuery Mobile -->
+		<link rel="stylesheet" href="/JettySample/css/jquery.mobile-1.4.3.min.css" />
+		<script type="text/javascript" src="/JettySample/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="/JettySample/js/jquery.mobile-1.4.3.min.js"></script>
+		<!-- 自作のCSSやJavaScriptを読み込む -->
+		<link rel="stylesheet" href="/JettySample/css/fujitsu.css" />
+		<link rel="stylesheet" href="/JettySample/css/register.css" />
+		<script type="text/javascript" src="/JettySample/js/fujitsu.js"></script>
+		<script type="text/javascript" src="/JettySample/js/register.js"></script>
+	</head>
+	<body>
+		<section id="register" data-role="page" data-title="自分のプロフィール" class="register_background">
+			<!-- ヘッダー表示エリア -->
+			<header data-role="header" data-position="fixed" data-tap-toggle="false">
+				<h1>自分のプロフィール</h1>
+			</header>
+
+			<!-- コンテンツ表示エリア -->
+			<article data-role="content" class="register_content">
+				<!-- エラーメッセージ表示エリア -->
+<!-- 				<h3 id="register_messageArea" class="ui-err-message"></h3> -->
+				<!-- 入力エリア -->
+				<div class="register_inputArea">
+					<table class="register_table" style="width: 100%;">
+						<tr>
+							<td align="right">
+								<span>氏名：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+									<div class="ui-select">
+										<span>サンプル</span>
+										<span>太郎</span>
+									</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<span>フリガナ：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+									<div class="ui-select">
+										<span>サンプル</span>
+										<span>タロウ</span>
+									</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<span>あだ名：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<div class="ui-select">
+											<span>サンタロー</span>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<span>生年月日：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<div class="ui-select">
+											<span>平成</span>
+											<span>5</span>
+											<span>年</span>
+											<span>1</span>
+											<span>月</span>
+											<span>1</span>
+											<span>日</span>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<span>性別：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+									<div class="ui-select">
+										<span>男性</span>
+									</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td align="right">
+								<span>郵便番号：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<span>101</span>
+										<span>-</span>
+										<span>1001</span>
+							        </div>
+							    </div>
+							</td>
+						</tr>
+
+						<!-- 住所入力欄 -->
+						<tr>
+							<td align="right">
+								<span>住所：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<div class="ui-select">
+											<span>東京都</span>
+											<span>千代田区</span>
+											<span>1-1-1</span>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+
+
+						<!-- 電話番号 -->
+						<tr>
+							<td align="right">
+								<span>電話番号：</span>
+							</td>
+							<td>
+							<div class="ui-table">
+								<div class="ui-table-cell">
+								<div class="ui-select">
+									<span>03-1234-5678</span>
+								</div>
+								</div>
+							</div>
+							</td>
+						</tr>
+
+						<!-- アイコン写真アップロード -->
+						<tr>
+							<td align="right">
+								<span>アイコン画像：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<div class="ui-select">
+											<span><img src="img/Koala.jpg" /></span>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td />
+							<td align="right">
+								<a id="register_submit" href="myProfile_edit.html" data-role="button" data-theme="b">編集</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- 確認ダイアログ -->
+
+			</article>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ログイン</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<!-- jQuery & jQuery Mobile -->
+		<link rel="stylesheet" href="/JettySample/css/jquery.mobile-1.4.3.min.css" />
+		<script type="text/javascript" src="/JettySample/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="/JettySample/js/jquery.mobile-1.4.3.min.js"></script>
+		<!-- 自作のCSSやJavaScriptを読み込む -->
+		<link rel="stylesheet" href="/JettySample/css/fujitsu.css" />
+		<script type="text/javascript" src="/JettySample/js/fujitsu.js"></script>
+	</head>
+	<body>
+		<section id="login" data-role="page" data-title="ログイン" class="login_background">
+			<!-- コンテンツ表示エリア -->
+			<article data-role="content" class="login_content">
+				<!-- 入力エリア -->
+				<div class="login_inputArea">
+					<!-- エラーメッセージ表示エリア -->
+					<h3 id="login_messageArea" class="ui-err-message"></h3>
+					<table class="login_table">
+						<tr>
+							<td>
+								<input id="login_id" name="login_id" type="text" autocomplete="off" placeholder="ID">
+							</td>
+							<td>
+								<input id="login_pw" name="login_pw" type="password" placeholder="パスワード">
+							</td>
+						</tr>
+						<tr>
+							<td />
+							<td align="right">
+								<input id="login_submit" type="submit" data-theme="b" value="ログイン" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="/JettySample/register.html">新規登録はこちら</a>
+							</td>
+							<td />
+						</tr>
+					</table>
+				</div>
+			</article>
+			<!-- フッターエリア -->
+			<footer id="login_footer" data-position="fixed" data-tap-toggle="false">
+				<span class="login_copyright">Copyright 2014 FUJITSU LIMITED</span>
+				<img src="/JettySample/images/hope_logo.png" class="login_logo" alt="ロゴ" />
+			</footer>
+		</section>
+	</body>
+</html>

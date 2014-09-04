@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>プロフィール編集</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<!-- jQuery & jQuery Mobile -->
+		<link rel="stylesheet" href="/JettySample/css/jquery.mobile-1.4.3.min.css" />
+		<script type="text/javascript" src="/JettySample/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="/JettySample/js/jquery.mobile-1.4.3.min.js"></script>
+		<!-- 自作のCSSやJavaScriptを読み込む -->
+		<link rel="stylesheet" href="/JettySample/css/fujitsu.css" />
+		<link rel="stylesheet" href="/JettySample/css/register.css" />
+		<script type="text/javascript" src="/JettySample/js/fujitsu.js"></script>
+		<script type="text/javascript" src="/JettySample/js/register.js"></script>
+	</head>
+	<body>
+		<section id="register" data-role="page" data-title="プロフィール編集" class="register_background">
+			<!-- ヘッダー表示エリア -->
+			<header data-role="header" data-position="fixed" data-tap-toggle="false">
+				<h1>プロフィール編集</h1>
+			</header>
+
+			<!-- コンテンツ表示エリア -->
+			<article data-role="content" class="register_content">
+				<!-- エラーメッセージ表示エリア -->
+				<h3 id="register_messageArea" class="ui-err-message"></h3>
+				<!-- 入力エリア -->
+				<div class="register_inputArea">
+					<table class="register_table" style="width: 100%;">
+						<tr>
+							<td align="right">
+								<span>氏名：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<input id="register_familyName" name="register_familyName" type="text" autocomplete="off" placeholder="姓">
+									</div>
+									<div class="ui-table-cell">
+										<input id="register_firstName" name="register_firstName" type="text" autocomplete="off" placeholder="名">
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<span>フリガナ：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<input id="register_kanaFamilyName" name="register_kanaFamilyName" type="text" autocomplete="off" placeholder="セイ">
+									</div>
+									<div class="ui-table-cell">
+										<input id="register_kanaFirstName" name="register_kanaFirstName" type="text" autocomplete="off" placeholder="メイ">
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<span>あだ名：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<input id="register_adana" name="register_adana" type="text" autocomplete="off" placeholder="あだ名">
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<span>生年月日：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<div class="ui-select">
+											<select id="select-choise-0" name="select-choise-0" data-native-menu="false" tabindex="-1">
+												<option value="1">明治</option>
+												<option value="2">大正</option>
+												<option value="3" selected="selected">昭和</option>
+												<option value="4">平成</option>
+											</select>
+										</div>
+									</div>
+									<div class="ui-table-cell">
+										<input id="register_year" name="register_year" type="text" maxlength="2" autocomplete="off" placeholder="年">
+									</div>
+									<div class="ui-table-cell">
+										<span>年</span>
+									</div>
+									<div class="ui-select">
+										<select name="select-choice-1" id="select-choice-1" data-native-menu="false" tabindex="-1">
+											<option value="month" selected="selected">--</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+										</select>
+									</div>
+									<div class="ui-table-cell">
+										<span>月</span>
+									</div>
+									<div class="ui-select">
+										<select name="select-choice-2" id="select-choice-2" data-native-menu="false" tabindex="-1">
+											<option value="day" selected="selected">--</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+											<option value="17">17</option>
+											<option value="18">18</option>
+											<option value="19">19</option>
+											<option value="20">20</option>
+											<option value="21">21</option>
+											<option value="22">22</option>
+											<option value="23">23</option>
+											<option value="24">24</option>
+											<option value="25">25</option>
+											<option value="26">26</option>
+											<option value="27">27</option>
+											<option value="28">28</option>
+											<option value="29">29</option>
+											<option value="30">30</option>
+											<option value="31">31</option>
+										</select>
+									</div>
+									<div class="ui-table-cell">
+										<span>日</span>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<span>性別：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<fieldset data-role="controlgroup" data-type="" data-mini="false">
+											<input type="radio" name="register_sex" id="register_male" value="0" checked="checked">
+											<label for="register_male">男性</label>
+											<input type="radio" name="register_sex" id="register_female" value="1">
+											<label for="register_female">女性</label>
+										</fieldset>
+									</div>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td align="right">
+								<span>郵便番号：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<input id="register_postalCode" name="register_postalCode" type="text" maxlength="7" autocomplete="off" placeholder="郵便番号(半角数字7桁)">
+							        </div>
+							    </div>
+							</td>
+						</tr>
+
+						<!-- 住所入力欄 -->
+						<tr>
+							<td align="right">
+								<span>住所：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<!-- 都道府県 -->
+									<div class="ui-table-cell">
+										<div class="ui-select">
+											<select name="select-choice-3" id="select-choice-3" data-native-menu="false" tabindex="-1">
+												<option value="" selected>都道府県
+												<option value="1">北海道
+												<option value="2">青森県
+												<option value="3">岩手県
+												<option value="4">宮城県
+												<option value="5">秋田県
+												<option value="6">山形県
+												<option value="7">福島県
+												<option value="8">茨城県
+												<option value="9">栃木県
+												<option value="10">群馬県
+												<option value="11">埼玉県
+												<option value="12">千葉県
+												<option value="13">東京都
+												<option value="14">神奈川県
+												<option value="15">新潟県
+												<option value="16">富山県
+												<option value="17">石川県
+												<option value="18">福井県
+												<option value="19">山梨県
+												<option value="20">長野県
+												<option value="21">岐阜県
+												<option value="22">静岡県
+												<option value="23">愛知県
+												<option value="24">三重県
+												<option value="25">滋賀県
+												<option value="26">京都府
+												<option value="27">大阪府
+												<option value="28">兵庫県
+												<option value="29">奈良県
+												<option value="30">和歌山県
+												<option value="31">鳥取県
+												<option value="32">島根県
+												<option value="33">岡山県
+												<option value="34">広島県
+												<option value="35">山口県
+												<option value="36">徳島県
+												<option value="37">香川県
+												<option value="38">愛媛県
+												<option value="39">高知県
+												<option value="40">福岡県
+												<option value="41">佐賀県
+												<option value="42">長崎県
+												<option value="43">熊本県
+												<option value="44">大分県
+												<option value="45">宮崎県
+												<option value="46">鹿児島県
+												<option value="47">沖縄県
+											</select>
+										</div>
+									</div>
+									<!-- 市区町村 -->
+									<div class="ui-table-cell">
+										<input id="register_address1" name="address1" type="text" autocomplete="off" placeholder="区市町村">
+									</div>
+									<div class="ui-select">
+										<select name="select-choice-4" id="select-choice-4" data-native-menu="false" tabindex="-1">
+											<option value="" selected>区市町村
+											<option value="1">区
+											<option value="2">市
+											<option value="3">町
+											<option value="4">村
+										</select>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<!-- 番地とか -->
+							<td align="right">
+								<span></span>
+							</td>
+							<td>
+							<div class="ui-table">
+								<div class="ui-table-cell">
+									<input id="register_address2" name="address2" type="text" autocomplete="off" placeholder="番地など">
+								</div>
+								</div>
+							</td>
+						</tr>
+
+						<!-- 電話番号 -->
+						<tr>
+							<td align="right">
+								<span>電話番号：</span>
+							</td>
+							<td>
+							<div class="ui-table">
+								<div class="ui-table-cell">
+								<input id="register_file" name="register_file" type="text" placeholder="自分のアイコンの画像を選択します">
+								</div>
+							</div>
+							</td>
+						</tr>
+
+						<!-- アイコン写真アップロード -->
+						<tr>
+							<td align="right">
+								<span>アイコン画像：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<form enctype="multipart/form-data" method="post">
+											<input id="register_password" name="userfile" type="file" /> <!-- onchange="checkFiles()" -->
+											<span class="uploadImage"></span>
+										</form>
+									</div>
+								</div>
+							</td>
+						</tr>
+
+						<!-- パスワード入力 -->
+						<tr>
+							<td align="right">
+								<span>パスワード：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<input id="register_password" name="register_familyName" type="password" maxlength="8" autocomplete="off" placeholder="パスワード">
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<span>パスワード(確認用)：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<input id="register_password2" name="register_familyName" type="password" maxlength="8" autocomplete="off" placeholder="パスワード(確認用)">
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td />
+							<td>
+								<span>※ パスワードは8桁の数字で設定してください</span>
+							</td>
+						</tr>
+						<tr>
+							<td />
+							<td>
+								<span id="register_messageArea"></span>
+							</td>
+						</tr>
+						<tr>
+							<td />
+							<td align="right">
+								<a id="register_submit" href="#" data-role="button" data-theme="b">登録</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- 確認ダイアログ -->
+				<div data-role="popup" id="register_confirm" data-overlay-theme="b" data-theme="a" data-dismissible="false" style="max-width: 400px;">
+					<div data-role="header" data-theme="a">
+						<h1>確認メッセージ</h1>
+					</div>
+					<div role="main" class="ui-content">
+						<h3 class="ui-title">編集しました。</h3>
+						<p>あなたのIDは「<span id="register_createId"></span>」です。</p>
+						<div class="ui-footer ui-table">
+							<div class="ui-footer-btn ui-table-cell"></div>
+							<div class="ui-footer-btn ui-table-cell">
+								<a href="#" data-role="button" data-rel="back">OK</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+	</body>
+</html>

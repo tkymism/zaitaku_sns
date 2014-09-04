@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", メイリオ, sans-serif;
+    font-size: 16px;
+}
+
+/**
+ * 共通
+ */
+.ui-table {
+    display: table;
+}
+
+.ui-table-cell {
+    display: table-cell;
+    padding: 0 .7em;
+}
+
+.ui-input-err-text {
+    background-color: rgba(255, 0, 0, .2) !important;
+}
+
+.ui-err-message {
+    color: #ff0000;
+}
+
+/**
+ * ログイン画面
+ */
+.login_content {
+
+}
+
+.login_inputArea {
+    padding: 1em;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    -moz-box-shadow: 0px 0px 3px 0px rgba(59,59,53,0.7);
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(59,59,53,0.7);
+    box-shadow: 0px 0px 3px 0px rgba(59,59,53,0.7);
+    position: absolute;
+    top: 30%;
+    right: 1em;
+    left: 1em;
+}
+
+.login_table {
+    width: 100%;
+}
+
+.login_table td {
+    width: 50%;
+    padding: 0 .7em;
+}
+
+.login_table .ui-input-btn {
+    width: 150px;
+}
+
+.login_background {
+    background-image: url(/JettySample/images/fujitsu_logo.png),
+                      url(/JettySample/images/background.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0px 0px,
+                         0px 0px;
+    background-size: 180px 110px,
+                     contain;
+    background-color: #ffffff;
+}
+
+.login_copyright {
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+}
+
+.login_logo {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    width: 153px;
+    height: 36px;
+}
+
+/**
+ * 新規登録画面
+ */
+.register_background {
+    background: #ffffff;
+}
+
+.register_table {
+    width: 100%;
+}
+
+.register_table td {
+    vertical-align: middle;
+}
+
+.register_table .ui-link.ui-btn {
+    width: 150px;
+}
+
+#register_year,
+#register_month,
+#register_day {
+    width: 50px;
+}
+
+/**
+ * 確認メッセージ
+ */
+#register_confirm {
+    max-width: 400px;
+    min-width: 400px;
+}
+
+#register_confirm .ui-header .ui-title {
+    margin-left: .7em;
+    text-align: left;
+}
+
+#register_confirm .ui-content .ui-title {
+    margin-bottom: 1.5em;
+}
+
+#register_confirm .ui-content .ui-footer {
+    border: none;
+    width: 100%;
+}
+
+#register_confirm .ui-content .ui-footer .ui-footer-btn {
+    width: 50%;
+    text-align: right;
+}
+
+#register_confirm .ui-content .ui-link.ui-btn {
+    width: 100px;
+}

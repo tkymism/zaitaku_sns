@@ -1,0 +1,11 @@
+.file input[type="file"]{
+  border-radius: 10px;
+  -moz-borderradius: 10px;
+  -webkit-border-radius: 10px;
+  border: thin solid #C6C6C6;
+}
+
+span img{
+	max-width: 300px;
+	max-height: 200px;
+}

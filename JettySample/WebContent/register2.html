@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>新規登録</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<!-- jQuery & jQuery Mobile -->
+		<link rel="stylesheet" href="/JettySample/css/jquery.mobile-1.4.3.min.css" />
+		<script type="text/javascript" src="/JettySample/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="/JettySample/js/jquery.mobile-1.4.3.min.js"></script>
+		<!-- 自作のCSSやJavaScriptを読み込む -->
+		<link rel="stylesheet" href="/JettySample/css/fujitsu.css" />
+		<script type="text/javascript" src="/JettySample/js/fujitsu.js"></script>
+	</head>
+	<body>
+		<section id="register" data-role="page" data-title="新規登録" class="register_background">
+			<!-- ヘッダー表示エリア -->
+			<header data-role="header" data-position="fixed" data-tap-toggle="false">
+				<h1>新規登録</h1>
+			</header>
+			<!-- コンテンツ表示エリア -->
+			<article data-role="content" class="register_content">
+				<!-- エラーメッセージ表示エリア -->
+				<h3 id="register_messageArea" class="ui-err-message"></h3>
+				<!-- 入力エリア -->
+				<div class="register_inputArea">
+					<table class="register_table" style="width: 100%;">
+						<tr>
+							<td align="right">
+								<span>氏名：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<input id="register_familyName" name="register_familyName" type="text" autocomplete="off" placeholder="姓">
+									</div>
+									<div class="ui-table-cell">
+										<input id="register_firstName" name="register_firstName" type="text" autocomplete="off" placeholder="名">
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<span>フリガナ：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<input id="register_kanaFamilyName" name="register_kanaFamilyName" type="text" autocomplete="off" placeholder="セイ">
+									</div>
+									<div class="ui-table-cell">
+										<input id="register_kanaFirstName" name="register_kanaFirstName" type="text" autocomplete="off" placeholder="メイ">
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<span>生年月日：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<select id="register_wareki" name="register_wareki">
+											<option value="1">明治</option>
+											<option value="2">大正</option>
+											<option value="3" selected="selected">昭和</option>
+											<option value="4">平成</option>
+										</select>
+									</div>
+									<div class="ui-table-cell">
+										<input id="register_year" name="register_year" type="text" maxlength="2" autocomplete="off" placeholder="年">
+									</div>
+									<div class="ui-table-cell">
+										<span>年</span>
+									</div>
+									<div class="ui-table-cell">
+										<input id="register_month" name="register_month" type="text" maxlength="2" autocomplete="off" placeholder="月">
+									</div>
+									<div class="ui-table-cell">
+										<span>月</span>
+									</div>
+									<div class="ui-table-cell">
+										<input id="register_day" name="register_day" type="text" maxlength="2" autocomplete="off" placeholder="日">
+									</div>
+									<div class="ui-table-cell">
+										<span>日</span>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<span>性別：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<fieldset data-role="controlgroup" data-type="horizontal" data-mini="false">
+											<input type="radio" name="register_sex" id="register_male" value="0" checked="checked">
+											<label for="register_male">男性</label>
+											<input type="radio" name="register_sex" id="register_female" value="1">
+											<label for="register_female">女性</label>
+										</fieldset>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<span>パスワード：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<input id="register_password" name="register_familyName" type="password" maxlength="8" autocomplete="off" placeholder="パスワード">
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<span>パスワード(確認用)：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<input id="register_password2" name="register_familyName" type="password" maxlength="8" autocomplete="off" placeholder="パスワード(確認用)">
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td />
+							<td>
+								<span>※ パスワードは8桁の数字で設定してください</span>
+							</td>
+						</tr>
+						<tr>
+							<td />
+							<td>
+								<span id="register_messageArea"></span>
+							</td>
+						</tr>
+						<tr>
+							<td />
+							<td align="right">
+								<a id="register_submit" href="#" data-role="button" data-theme="b">登録</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- 確認ダイアログ -->
+				<div data-role="popup" id="register_confirm" data-overlay-theme="b" data-theme="a" data-dismissible="false" style="max-width: 400px;">
+					<div data-role="header" data-theme="a">
+						<h1>確認メッセージ</h1>
+					</div>
+					<div role="main" class="ui-content">
+						<h3 class="ui-title">新規登録しました。</h3>
+						<p>あなたのIDは「<span id="register_createId"></span>」です。</p>
+						<div class="ui-footer ui-table">
+							<div class="ui-footer-btn ui-table-cell"></div>
+							<div class="ui-footer-btn ui-table-cell">
+								<a href="#" data-role="button" data-rel="back">OK</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+	</body>
+</html>

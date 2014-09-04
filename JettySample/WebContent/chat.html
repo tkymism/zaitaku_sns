@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Message Screen</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery & jQuery Mobile -->
+		<link rel="stylesheet" href="/JettySample/css/jquery.mobile-1.4.3.min.css" />
+		<script type="text/javascript" src="/JettySample/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="/JettySample/js/jquery.mobile-1.4.3.min.js"></script>
+
+	<!-- 自分で追加したcssとか -->
+	<link rel="stylesheet" type="text/css" href="css/chat.css">
+	<script src="js/chat.js" type="text/javascript"></script>
+	<script src="js/jquery-1.11.1.js" type="text/javascript"></script>
+
+  </head>
+  <body>
+
+	<div class="container">
+
+	<!--  ウィンドウサイズ変更    ↓col-xs-○ とか col-md-○ とか -->
+    <div class="row chat-window col-xs-7 col-md-10" id="chat_window_1" style="margin-left:10px;">
+        <div class="col-xs-12 col-md-12">
+        	<div class="panel panel-default">
+                <div class="panel-heading top-bar">
+                    <div class="col-md-8 col-xs-8">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-comment"></span>　さんぷる先生</h3>
+                    </div>
+                    <div class="col-md-4 col-xs-4" style="text-align: right;">
+                        <a href="#"><span id="minim_chat_window" class="glyphicon glyphicon-minus icon_minim"></span></a>
+                        <a href="#"><span class="glyphicon glyphicon-remove icon_close" data-id="chat_window_1"></span></a>
+                    </div>
+                </div>
+
+
+	<!-- チャットの中の画面(吹き出しとか) -->
+                <div class="panel-body msg_container_base" id="body">
+
+                    <!-- <div class="row msg_container base_receive">
+                        <div class="col-md-10 col-xs-10">
+                            <div class="messages msg_receive">
+                                <p>that mongodb thing looks good, huh?
+                                tiny master db, and huge document store</p>
+                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                    </div>
+                    -->
+
+                    <div class="row msg_container base_receive">
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive img-circle">
+                        </div>
+                        <div class="col-md-10 col-xs-10">
+                            <div class="messages msg_receive">
+                                <p>おはようございます。</p>
+                                <time datetime="time">
+                                10時5分40秒
+                                </time>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--
+                    <div class="row msg_container base_receive">
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                        <div class="col-xs-10 col-md-10">
+                            <div class="messages msg_receive">
+                                <p>that mongodb thing looks good, huh?
+                                tiny master db, and huge document store</p>
+                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row msg_container base_sent">
+                        <div class="col-xs-10 col-md-10">
+                            <div class="messages msg_sent">
+                                <p>that mongodb thing looks good, huh?
+                                tiny master db, and huge document store</p>
+                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                    </div>
+                    <div class="row msg_container base_receive">
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                        <div class="col-xs-10 col-md-10">
+                            <div class="messages msg_receive">
+                                <p>that mongodb thing looks good, huh?
+                                tiny master db, and huge document store</p>
+                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row msg_container base_sent">
+                        <div class="col-md-10 col-xs-10 ">
+                            <div class="messages msg_sent">
+                                <p>that mongodb thing looks good, huh?
+                                tiny master db, and huge document store</p>
+                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        </div>
+                    </div>
+                    --->
+
+	<!-- 吹き出しを追加する(jsで実行)ためのタグ -->
+					<div id="no0"></div>
+
+                </div>
+
+
+	<!-- 文字入力ゾーン -->
+                <div class="panel-footer">
+                    <div class="input-group">
+                        <div data-role="fieldcontain">
+                        	<form method="get" name="formname" id="formname">
+                        	<!-- 入力フォーム -->
+                        		<div style="float:left;">
+                        			<input type="text" name="myarea" data-inline="true" class="" placeholder="ここに入力" />
+								</div>
+								<!-- フォームとボタン間の隙間 -->
+								<span>&nbsp;</span>
+								<!-- 送信ボタン -->
+								<input type="button" data-inline="true" data-mini="true" class="btn btn-primary" id="btn-chat" value="send" onClick="addBal(this.form);" />
+                       			<br>
+
+                       			<!-- テンプレートのセレクトボックス -->
+		                    	<div style="float:left;">
+		                        	<div class="ui-select">
+		                        		<select data-inline="true" data-mini="true" name="selectTemp" id="selectTemp" data-native-menu="false" tabindex="-1">
+											<option value="こんにちは">こんにちは</option>
+		      								<option value="おはようございます">おはようございます</option>
+		      								<option value="元気です">元気です</option>
+		      								<option value="おかげさまで">おかげさまで</option>
+		      								<option value="失礼します">失礼します</option>
+		      								<option value="おやすみなさい">おやすみなさい</option>
+		      								<option value="間違えました">間違えました</option>
+		      								<input type="button" data-inline="true" data-mini="true" class="btn btn-primary" id="btn-chat" value="挿入" onclick="buttonClick(formname);" />
+		                        		</select>
+		                        	</div>
+		                        </div>
+                       		</form>
+						</div>
+                    </div>
+                </div>
+    		</div>
+        </div>
+    </div>
+
+
+	<!--   左下設定ボタン(未着手)  -->
+    <div class="btn-group dropup">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-cog"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#" id="new_chat"><span class="glyphicon glyphicon-plus"></span> Novo</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-list"></span> Ver outras</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-remove"></span> Fechar Tudo</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><span class="glyphicon glyphicon-eye-close"></span> Invisivel</a></li>
+        </ul>
+    </div>
+</div>
+
+  </body>
+</html>

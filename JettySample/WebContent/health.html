@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>記入欄</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<!-- jQuery & jQuery Mobile -->
+		<link rel="stylesheet" href="/JettySample/css/jquery.mobile-1.4.3.min.css" />
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script type="text/javascript" src="/JettySample/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="/JettySample/js/jquery.mobile-1.4.3.min.js"></script>
+		<!-- 自作のCSSやJavaScriptを読み込む -->
+		<link rel="stylesheet" href="/JettySample/css/fujitsu.css" />
+	</head>
+	<body>
+		<section id="register" data-role="page" data-title="今日の様子" class="register_background">
+			<!-- ヘッダー表示エリア -->
+			<header data-role="header" data-position="fixed" data-tap-toggle="false">
+				<h1>記入欄</h1>
+			</header>
+			<!-- コンテンツ表示エリア -->
+			<article data-role="content" class="register_content">
+				<!-- エラーメッセージ表示エリア -->
+<!-- 				<h3 id="register_messageArea" class="ui-err-message"></h3> -->
+				<!-- 入力エリア -->
+
+<!-- 日付を表示 -->
+				<script>
+ 				var date = new Date();
+ 				var year = date.getFullYear();
+ 				var month = date.getMonth();
+ 				var week = date.getDay();
+ 				var day = date.getDate();
+
+ 				month++;
+ 				var temp = new Array("日","月","火","水","木","金","土");
+ 				document.write(year + "年" + month + "月" + day + "日(" + temp[week] + ")");
+				</script>
+
+				<div class="register_inputArea">
+					<table class="register_table" style="width: 100%;">
+						<tr>
+							<td align="right">
+								<span>体調：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<select id="register_wareki" name="register_wareki">
+											<option value="0" selected="selected">選択してください</option>
+											<option value="1">非常に良い</option>
+											<option value="2">良い</option>
+											<option value="3">普通</option>
+											<option value="4">悪い</option>
+											<option value="5">非常に悪い</option>
+										</select>
+										</div>
+									</div>
+						<tr>
+							<td align="right">
+								<span>睡眠：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<select id="register_wareki2" name="register_wareki2">
+											<option value="0" selected="selected">選択してください</option>
+											<option value="1">非常に良い</option>
+											<option value="2">良い</option>
+											<option value="3">普通</option>
+											<option value="4">悪い</option>
+											<option value="5">非常に悪い</option>
+										</select>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<span>食事：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<select id="register_wareki3" name="register_wareki3">
+											<option value="0" selected="selected">選択してください</option>
+											<option value="1">非常に良い</option>
+											<option value="2">良い</option>
+											<option value="3">普通</option>
+											<option value="4">悪い</option>
+											<option value="5">非常に悪い</option>
+										</select>
+									</div>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td align="right">
+								<span>備考：</span>
+							</td>
+							<td>
+								<div class="ui-table">
+									<div class="ui-table-cell">
+										<input placeholder="何かあれば">
+									</div>
+								</div>
+							</td>
+						<tr>
+							<td />
+							<td align="right">
+								<a href="index.html" data-role="button" data-theme="b">登録</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</article>
+		</section>
+	</body>
+</html>
